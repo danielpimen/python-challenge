@@ -8,12 +8,20 @@ numline = len(file.readlines())
 print (int(numline - 1))
 
 #The net total amount of "Profit/Losses" over the entire period
+a = []
+
 with open(budget_csv, newline="") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
     csv_header = next(csvfile)
     print(f"Header: {csv_header}")
     for row in csvreader:
-        print(row)
+        number = int(row[1])
+        a.append(number)
+       # sum = sum += row[1]
+total = sum(a)
+print(total)
+
+    
 #The average of the changes in "Profit/Losses" over the entire period
 
 
