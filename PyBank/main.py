@@ -5,7 +5,7 @@ budget_csv = os.path.join("budget_data.csv")
 #print("Working")
 file = open(budget_csv)
 numline = len(file.readlines())
-print ("The total number of lines is" , int(numline - 1))
+print ("The total number of lines is " , int(numline - 1))
 
 #The net total amount of "Profit/Losses" over the entire period
 a = []
@@ -29,6 +29,9 @@ def Max(x):
    max_num = max(a)
    print("The Max is" , max_num)
 Max(total)
-    
 
 #The greatest decrease in losses (date and amount) over the entire period
+def Min(x): 
+   min_num = min(a)
+   print("The Min is" , min_num)
+Min(total)
